@@ -10,7 +10,7 @@ import { Roll } from "react-awesome-reveal";
 function App() {
   const [uniData, setUniData] = useState([]);
   const [dataArr, setDataArr] = useState([]);
-  const [currentPageData, setCurrentPageData] = useState(new Array().fill());
+  const [currentPageData, setCurrentPageData] = useState([]);
 
   const baseUrl =
     "http://universities.hipolabs.com/search?country=United+States";
@@ -24,7 +24,9 @@ function App() {
 
   useEffect(() => {
     fetchData();
+    /* eslint-disable */
   }, [uniData]);
+  /* eslint-enable */
 
   return (
     <div className="App">
